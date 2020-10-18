@@ -56,6 +56,11 @@ class GeoLocationCloud extends Engine {
 
       cloudData = JSON.parse(cloudData);
 
+      if (cloudData.device && cloudData.device.geolocation === null && cloudData.device.geolocationnullreason) {
+        console.warn("WARNING: geolocation not populated. " + cloudData.device.geolocationnullreason + "\n" +
+          "This may be because the provided API key is not authorised for geolocation queries.")
+      }
+
       // Loop over cloudData.location or cloudData.location_digitalelement properties to check if they have a value
 
       const result = {};
