@@ -85,6 +85,10 @@ if (isAsync) {
     flowData.process().then(function () {
       const country = flowData.location.country;
       expect(country.hasValue).toBe(false);
+      
+      // Debug: log the actual message to understand CI failure
+      console.log('DEBUG - Actual noValueMessage:', JSON.stringify(country.noValueMessage));
+      
       expect(country.noValueMessage.indexOf('This property requires ' +
         'evidence values from JavaScript running on the client. It ' +
         'cannot be populated until a future request is made that ' +
