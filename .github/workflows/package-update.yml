@@ -1,19 +1,15 @@
-name: Nightly Package Update
+name: Package Update
 
 on:
   workflow_dispatch:
     inputs:
       dryrun:
-        default: false
         type: boolean
-        description: Dry Run
-# This iss intentional change to prevent npm updates,
-# otherwise it is causing an endless dependency update loop for fiftyone.* packages in this repository
-#  schedule:
-#    - cron: '0 0 * * *'
+        default: false
 
 jobs:
-  Nightly_Package_Update:
+  PackageUpdate:
+    name: Package Update
     uses: 51Degrees/common-ci/.github/workflows/nightly-package-update.yml@main
     with:
       repo-name: ${{ github.event.repository.name }}
