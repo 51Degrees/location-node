@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This repo has been merged into the monorepo https://github.com/51Degrees/51degrees-node, under `location/`. Please refer to the new monorepository for issues and PRs. The npm package `fiftyone.geolocation` keeps its name and is published from there, from version 4.5.98.
+
 # 51Degrees Geo-Location Engines
 
 ![51Degrees](https://51degrees.com/img/logo.png?utm_source=github&utm_medium=readme&utm_campaign=location-node&utm_content=readme.md&utm_term=51degrees-geo-location-engines "Data rewards the curious") **Pipeline API**
